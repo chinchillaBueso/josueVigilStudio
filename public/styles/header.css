@@ -61,10 +61,14 @@ header .botonmenu:hover{
 header .botonmenu:focus{
   border: solid 1px;
 }
-
+.linea{
+  background-color: #494e4c1c;
+  height: 1px;
+  width: 100%;
+}
 .imagen{
   height: 511px;
-  background-image: url('../img/index/BodaJosueVigil.jpg');
+  background-image: url('../img/index/BodaJosueVigil1.jpg');
   background-size: cover;
   margin-top: 2em;
   margin-bottom: 4em;
