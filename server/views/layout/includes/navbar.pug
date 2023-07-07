@@ -1,0 +1,37 @@
+header#menuocultar 
+ nav.navbar.bg-body-tertiary.fixed-top
+  .container
+    .principal.d-flex.flex-lg-column.align-items-center.justify-content-between.justify-content-lg-center
+      a.navbar-brand.d-flex.flex-column.align-items-center(href='/')
+        span.logotipo 
+            i.fa-sharp.fa-solid.fa-camera
+        | JouseVigilStudio
+      .menu
+        ul.navbar-nav
+          li.nav-item.mt-2
+            a.nav-link.active(aria-current='page' href='/' , class=(ruta==='/'? 'active':'')) Inicio
+          li.nav-item.mt-2
+            a.nav-link(href='/sobreMi',class=(ruta==='/sobreMi'? 'active':'')) Sobre M&iacute
+          li.nav-item.mt-2
+            a.nav-link(href='/portafolio', class=(ruta==='/portafolio'?'active':'')) Portafolio
+          li.nav-item.mt-2
+            a.nav-link(href='/contactanos',class=(ruta==='/contactanos'?'active':'')) Contactanos
+        
+      button.botonmenu.navbar-toggler(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasNavbar' aria-controls='offcanvasNavbar' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    
+    #offcanvasNavbar.offcanvas.offcanvas-end(tabindex='-1' aria-labelledby='offcanvasNavbarLabel')
+      .offcanvas-header
+        h5#offcanvasNavbarLabel.offcanvas-title Men&uacute
+        button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+      .offcanvas-body
+        ul.navbar-nav.justify-content-end.flex-grow-1.pe-3.text-center
+          li.nav-item.mt-2
+            a.nav-link(aria-current='page' href='/', class=(ruta==='/'? 'active':'')) Inicio
+          li.nav-item.mt-2
+            a.nav-link(href='/sobreMi', class=(ruta==='/sobreMi'? 'active':'')) Sobre M&iacute
+          li.nav-item.mt-2
+            a.nav-link(href='/portafolio', class=(ruta==='/portafolio'?'active':'')) Portafolio
+          li.nav-item.mt-2
+            a.nav-link(href='/contactanos', class=(ruta==='/contactanos'?'active':'')) Contactanos
+        

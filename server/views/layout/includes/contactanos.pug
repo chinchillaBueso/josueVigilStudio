@@ -1,0 +1,55 @@
+section
+ .contactanos#contactanos
+   .row.formularioContacto          
+     .col-12.col-md-6.infocontacto.uno
+        h3  Déjanos un mensaje y juntos crearemos recuerdos inolvidables. 
+        p.text-center.mb-3 ¡Estamos listos para convertir tus sueños en realidad fotográfica!
+        p
+         span 
+          i.fas.fa-home
+         | Cucuyagua Cop&aacuten, 
+        p 
+          span 
+            i.fas.fa-envelope
+          |  josuevigil83@yahoo.com
+        p 
+          span
+            i.fas.fa-phone
+          |  + 504 97308128
+        p 
+          a(href='https://www.facebook.com/JosueVigilFotografo',target='blank')  
+             span
+                i.fa-brands.fa-facebook
+             |  Josue Vigil - Fotografo
+        p 
+          a(href='https://www.instagram.com/josuevigilstudio/',target='blank')  
+             span
+                i.fa-brands.fa-instagram
+             |  josuevigilstudio
+     .col-12.col-md-6.dos
+          h2.contacto.text-center.mt-4 ¡Contáctanos! 
+          form(action='/contactanos' method="POST").mt-3
+           .form-group
+                span.col-md-1.col-md-offset-2.text-center
+                i.fa.fa-user.bigicon
+                input(id="nombre",class="form-control", type="text", placeholder="Ingresa tu nombre" , name="nombre",required, value=nombre)
+                br
+           .form-group  
+                span.col-md-1.col-md-offset-2.text-center
+                i.fa.solid.fa-envelope.bigicon
+                input(id="correo",class="form-control", type="email", placeholder="Ingresa tu correo" , name="correo", required value=correo)
+                br
+           .form-group 
+                span.col-md-1.col-md-offset-2.text-center
+                i.fa.solid.fa-mobile.bigicon
+                input(id="telefono",class="form-control", type="tel", placeholder="Ingresa tu teléfono" , name="telefono",  required value=telefono)
+                br
+           .form-group
+                span.col-md-1.col-md-offset-2.text-center
+                i.fa-solid.fa-comment.bigicon
+                textarea#mensaje(class="form-control" name="mensaje",rows="3", placeholder="Mensaje" required)=mensaje
+                br
+           if(validaciones)
+                 p.alert.alert-danger=validacion[0].msg
+           .form-group.botonenviar
+              input(type="submit" value="Enviar Mensaje" class="btn  form-control ")
